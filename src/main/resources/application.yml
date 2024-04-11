@@ -1,0 +1,41 @@
+
+spring:
+  application:
+    name: lab6
+  main:
+    banner-mode: off
+
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.MySQLDialect
+          format_sql: true
+
+
+  # Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
+
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/lab6
+#    username: root
+#    password: "root"
+#    # Hibernate Properties
+#  jpa:
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL8Dialect
+#    hibernate:
+#      ddl-auto: update
+
+
+
+  # Port
+  server:
+    port: 8082
+
+
+
+
