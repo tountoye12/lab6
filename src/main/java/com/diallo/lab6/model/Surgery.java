@@ -16,10 +16,14 @@ public class Surgery {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    private String title;
-    private String description;
+//    private String title;
+//    private String description;
+    private String surgeryNumber;
     @OneToOne
     private Address address;
-    @OneToMany()
+    @OneToMany(mappedBy = "surgery")
     private List<Appointment> appointmentList;
+
+
+
 }

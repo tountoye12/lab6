@@ -18,15 +18,13 @@ public class Patient {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    private String patientNumber;
     private String firstName;
-    private String lastName;
-    private String email;
-    private String phone;
-    @OneToOne
+//    private String lastName;
+//    private String email;
+//    private String phone;
+    @OneToOne(mappedBy = "patient")
     private Address address;
     @OneToMany()
     private List<Appointment> appointments;
-
-    @ManyToOne()
-    private Dentist dentist;
 }

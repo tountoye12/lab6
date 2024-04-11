@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -16,10 +18,13 @@ public class Appointment {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    private String title;
-    private String description;
-    @ManyToOne()
+//    private String title;
+//    private String description;
+    private LocalDate date;
+    @ManyToOne(cascade = CascadeType.ALL)
     private Patient patient;
-    @ManyToOne()
+    @ManyToOne(cascade = CascadeType.ALL)
     private Surgery surgery;
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Dentist dentist;
 }

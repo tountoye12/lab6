@@ -20,4 +20,9 @@ public class Address {
     private String state;
     private String zip;
 
+    @OneToOne()
+    private Patient patient;
+    @OneToOne()
+    private Surgery surgery;
+
 }
